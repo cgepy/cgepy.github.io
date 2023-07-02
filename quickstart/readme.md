@@ -5,7 +5,6 @@ Type the following into your preferred console/shell: (command may vary based on
 
 `pip install cgepy`
 ### `#` Getting started
-> So you want to create an 8-bit game with cgepy? You're in the right place.
 ####                Importing cgepy
 Like every library, the first thing you want to do is import it.
 ```py
