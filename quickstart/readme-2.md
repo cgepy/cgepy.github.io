@@ -19,7 +19,7 @@ If you want, grab yourself some color as well.
 ```py
 from cge.colors import Color
 ```
-####                Making a simple application
+####                Making a simple program
 With imports out of the way, let's get started.
 ```py
 my_canvas = cge.Grid() # Define a grid. You can have more than one!
@@ -33,7 +33,6 @@ my_canvas.write((0,0), cge.Presets.green()) # Make it green!
 my_canvas.write((1,0), cge.Presets.blue()) # The square below the green is now blue!
 ```
 Try playing around with this for a little and see what you can make.
-
 ####                Adding a sprite
 Now that you can edit the game canvas, you can also make a controllable sprite. However, cgepy already has a system for managing and controlling sprites, so we'll stick with that for now.\
 First, create a new file or erase your old one. Once you are finished with that, your file should look like this:
@@ -50,4 +49,8 @@ my_grid.Update()
 Try it! It should look like a red square in the top left corner.\
 You can't interact with it, though. So why not learn h-
 ####                Controlling a sprite
+Yes, you guessed it. It's time to learn to move sprites around, access their position, and more.\
+```py
+# (in a new file)
 
+import cge
