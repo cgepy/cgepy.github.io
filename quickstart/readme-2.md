@@ -1,7 +1,7 @@
 you are at [docs](https://cgepy.github.io/docs)/[quickstart](https://cgepy.github.io/docs/quickstart) • get started with cgepy
 
 ### `#` Installing cgepy
-Type the following into your preferred console/shell: (command may vary based on operating systems)
+Type the following into your preferred console/shell:
 
 `pip install cgepy`
 ### `#` Getting started
