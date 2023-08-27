@@ -13,7 +13,6 @@ import cge
 Because the library comes with a few extra utilities, you may want to import those too. (More on this later!)
 ```py
 from cge.ext import clear
-from cge.ext
 ```
 If you want, grab yourself some color as well. 
 ```py
@@ -27,7 +26,7 @@ my_canvas.Update() # Clear the screen and print the game canvas.
 ```
 This is a very simple template. However, you can easily tweak the appearance of your grid.
 ```py
-# Assuming you want to edit index 0...
+# Assuming you want to edit index zero...
 my_canvas.write((0,0), cge.Presets.green()) # Make it green!
 # Or, if you wanted something different:
 my_canvas.write((1,0), cge.Presets.blue()) # The square below the green is now blue!
@@ -46,11 +45,32 @@ my_sprite = cge.Sprite() # By default, the sprite will be at index zero. It's pr
 my_sprite.Drop(my_canvas) # This will add the sprite to your grid. It can be in multiple grids at a time!
 my_grid.Update()
 ```
-Try it! It should look like a red square in the top left corner.\
-You can't interact with it, though. So why not learn h-
+Try it! It should look like a red square in the top left corner. Adding more is easy too, and so is removing them!
+```py
+my_sprite2 = cge.sprite(pos = (9,0), color = cge.Presets.yellow()) # On the other side of the canvas!
+my_sprite2.Drop(my_canvas)
+my_canvas.Update()
+
+my_sprite.Remove(my_canvas) # my_sprite won't show up anymore.
+my_canvas.Update()
+```
 ####                Controlling a sprite
 Yes, you guessed it. It's time to learn to move sprites around, access their position, and more.\
 ```py
 # (in a new file)
 
 import cge
+
+my_canvas = cge.Grid()
+my_sprite = cge.Sprite()
+
+my_sprite.Drop(my_canvas)
+```
+As usual, the sprite will appear at index zero. There are a few ways to change this, though.
+```py
+my_sprite.Move("down") # Instead of down, WASD and IJKL also work.
+my_canvas.Update() # Sprite appears one index lower.
+
+my_sprite.Go((0,2)) # The position follows standard X and Y format (eg. X,Y instead of Y,X)
+my_canvas.Update() # Sprite appears two indexes below 0,0
+```
