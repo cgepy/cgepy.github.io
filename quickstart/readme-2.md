@@ -1,7 +1,7 @@
 you are at [docs](https://cgepy.github.io/docs)/[quickstart](https://cgepy.github.io/docs/quickstart) • get started with cgepy
 
 ### `#` Installing cgepy
-Type the following into your preferred console/shell:
+Type the following into your preferred terminale/shell:
 
 `pip install cgepy`
 ### `#` Getting started
@@ -21,8 +21,8 @@ from cge.colors import Color
 ####                Making a simple program
 With imports out of the way, let's get started.
 ```py
-my_canvas = cge.Grid() # Define a grid. You can have more than one!
-my_canvas.Update() # Clear the screen and print the game canvas.
+my_canvas = cge.Grid() # Define a grid. The size is changeable and defaults to 20, and you can have multiple grids.
+my_canvas.Update() # Clear the screen and print the game canvas. Automatic screen clearing CAN be disabled via the `screenclearing` option.
 ```
 This is a very simple template. However, you can easily tweak the appearance of your grid.
 ```py
@@ -68,9 +68,10 @@ my_sprite.Drop(my_canvas)
 ```
 As usual, the sprite will appear at index zero. There are a few ways to change this, though.
 ```py
-my_sprite.Move("down") # Instead of down, WASD and IJKL also work.
+my_sprite.Move("down") # Instead of down, cardinal directions, WASD, and IJKL also work.
 my_canvas.Update() # Sprite appears one index lower.
 
-my_sprite.Go((0,2)) # The position follows standard X and Y format (eg. X,Y instead of Y,X)
+my_sprite.Go((0,2)) # The position follows standard X and Y format (eg. X then Y instead of Y before X as used by other libs, which makes me want to reconsider calling it "standard")
 my_canvas.Update() # Sprite appears two indexes below 0,0
 ```
+####                Adding new colors
