@@ -22,7 +22,7 @@ from cge.colors import Color
 With imports out of the way, let's get started.
 ```py
 my_canvas = cge.Grid() # Define a grid. The size is changeable and defaults to 20, and you can have multiple grids.
-my_canvas.Update() # Clear the screen and print the game canvas. Automatic screen clearing CAN be disabled via the `screenclearing` option.
+my_canvas.Update() # Clear the screen and print the game canvas.
 ```
 This is a very simple template. However, you can easily tweak the appearance of your grid.
 ```py
@@ -31,7 +31,7 @@ my_canvas.write((0,0), cge.Presets.green()) # Make it green!
 # Or, if you wanted something different:
 my_canvas.write((1,0), cge.Presets.blue()) # The square below the green is now blue!
 ```
-Try playing around with this for a little and see what you can make.
+This is the core functionality of cgepy, but there are easier ways to manipulate grids. Keep reading if you wa
 ####                Adding a sprite
 Now that you can edit the game canvas, you can also make a controllable sprite. However, cgepy already has a system for managing and controlling sprites, so we'll stick with that for now.\
 First, create a new file or erase your old one. Once you are finished with that, your file should look like this:
@@ -71,7 +71,11 @@ As usual, the sprite will appear at index zero. There are a few ways to change t
 my_sprite.Move("down") # Instead of down, cardinal directions, WASD, and IJKL also work.
 my_canvas.Update() # Sprite appears one index lower.
 
-my_sprite.Go((0,2)) # The position follows standard X and Y format (eg. X then Y instead of Y before X as used by other libs, which makes me want to reconsider calling it "standard")
-my_canvas.Update() # Sprite appears two indexes below 0,0
+# Alternatively, you can use Go() if you are moving the sprite more than one unit. 
+
+my_sprite.Go((0,2)) # The position follows the normal (X,Y) format, not Y before X like the curses library.
+my_canvas.Update() # Sprite appears two indexes below (0,0) 
 ```
 ####                Adding new colors
+
+While cgepy does offer preset colors, you can also create your own with ease.
