@@ -1,4 +1,4 @@
-you are at docs/faqs • i ate the hyperlinks for lunch, sorry!
+you are at [~](https://cgepy.github.io)/[faqs](https://cgepy.github.io/faqs) • 
 
 ### **Q: How do I install cgepy?**
 ### A: Run `pip install cgepy` in your terminal.

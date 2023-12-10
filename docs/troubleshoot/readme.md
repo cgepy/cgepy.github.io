@@ -2,7 +2,7 @@ you are at [docs](https://cgepy.github.io/docs)/[troubleshoot](https://cgepy.git
 
 
 ### `#` General Help
-[FAQs](https://cgepy.github.io/docs/faqs) Common questions and their answers can be found here.\
+[FAQs](https://cgepy.github.io/faqs) Common questions and their answers can be found here.\
 [Quickstart](https://cgepy.github.io/docs/quickstart) Get started with cgepy here.\
 [Github](https://github.com/catbox305/cge/discussions) If your question isn't in the docs, ask here.
 
